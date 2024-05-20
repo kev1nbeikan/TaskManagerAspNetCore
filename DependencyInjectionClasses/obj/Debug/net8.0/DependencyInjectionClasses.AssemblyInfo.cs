@@ -10,13 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("3c7142e4-f365-4741-92f1-974856afc071")]
-[assembly: System.Reflection.AssemblyCompanyAttribute("TaskManager.API")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("DependencyInjectionClasses")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3151e009310a2219806bd9c0cab33a34f5e3be21")]
-[assembly: System.Reflection.AssemblyProductAttribute("TaskManager.API")]
-[assembly: System.Reflection.AssemblyTitleAttribute("TaskManager.API")]
+[assembly: System.Reflection.AssemblyProductAttribute("DependencyInjectionClasses")]
+[assembly: System.Reflection.AssemblyTitleAttribute("DependencyInjectionClasses")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

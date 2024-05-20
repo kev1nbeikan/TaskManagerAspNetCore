@@ -9,23 +9,24 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0"/>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
-        <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.6.1" />
-        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.6.1" />
-        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.6.1" />
-        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.6.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.6.1"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.6.1"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.6.1"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.6.1"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TaskManager.Application\TaskManager.Application.csproj" />
-      <ProjectReference Include="..\TaskManager.DataAccess\TaskManager.DataAccess.csproj" />
+        <ProjectReference Include="..\DependencyInjectionClasses\DependencyInjectionClasses.csproj" />
+        <ProjectReference Include="..\TaskManager.Application\TaskManager.Application.csproj"/>
+        <ProjectReference Include="..\TaskManager.DataAccess\TaskManager.DataAccess.csproj"/>
     </ItemGroup>
 
 </Project>
