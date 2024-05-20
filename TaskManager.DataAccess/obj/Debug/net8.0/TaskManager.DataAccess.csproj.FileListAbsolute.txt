@@ -1,0 +1,17 @@
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\bin\Debug\net8.0\TaskManager.DataAccess.deps.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\bin\Debug\net8.0\TaskManager.DataAccess.runtimeconfig.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\bin\Debug\net8.0\TaskManager.DataAccess.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\bin\Debug\net8.0\TaskManager.DataAccess.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\bin\Debug\net8.0\TaskManager.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\bin\Debug\net8.0\TaskManager.Core.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.csproj.AssemblyReference.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.AssemblyInfoInputs.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.AssemblyInfo.cs
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskMana.388921B7.Up2Date
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\refint\TaskManager.DataAccess.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.genruntimeconfig.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\ref\TaskManager.DataAccess.dll
