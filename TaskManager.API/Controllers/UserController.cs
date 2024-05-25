@@ -1,9 +1,12 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using User.Application.Service;
 using WebApplication3.Contracts;
 
 namespace Users.Api.Controllers;
 
+
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class UserController : ControllerBase
@@ -15,12 +18,15 @@ public class UserController : ControllerBase
         _userService = userService1;
     }
 
-
+    [AllowAnonymous]
     [HttpPost("login")]
     public async Task<ActionResult<string>> Login(UserLoginRequest request)
     {
-        var result = await _userService.Login(request.Email, request.Password);
-        return Ok(result);
+        var token = await _userService.Login(request.Email, request.Password);
+
+        ControllerContext.HttpContext.Response.Cookies.Append("token--cookies", token);
+
+        return Ok(token);
     }
 
 
@@ -36,5 +42,12 @@ public class UserController : ControllerBase
         {
             return BadRequest(e.Message);
         }
+    }
+    
+    
+    [HttpGet("test")]
+    public  IActionResult Test()
+    {
+        return Ok();
     }
 }

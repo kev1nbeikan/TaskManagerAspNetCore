@@ -12,33 +12,28 @@ public class JwtProvider() : IJwtProvider
 
     private readonly IConfiguration _configuration;
     private string? secretKey;
-    private int expiresHours;
+    private string expiresHours;
 
     public JwtProvider(IConfiguration configuration) : this()
     {
         _configuration = configuration;
         
         secretKey = _configuration.GetSection("JwtOptions:SecretKey").Value;
-        var value = _configuration.GetSection("JwtOptions:ExpiresHours").Value;
-        if (value != null)
-            expiresHours = int.Parse(value);
+        expiresHours = _configuration.GetSection("JwtOptions:ExpiresHours").Value;
+
     }
     
     public string GenerateToken(Users.Core.User user)
     {
-        Claim[] claims = new Claim[] { new Claim("userId", user.UserId.ToString()) }; // claims 
 
         var singningCredentials = new SigningCredentials(
-            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!)),
             SecurityAlgorithms.HmacSha256
         );
 
         var token = new JwtSecurityToken(
-            claims: claims,
             signingCredentials:
-            singningCredentials,
-            expires:
-            DateTime.UtcNow.AddHours(expiresHours)
+            singningCredentials
         );
 
         return new JwtSecurityTokenHandler().WriteToken(token);

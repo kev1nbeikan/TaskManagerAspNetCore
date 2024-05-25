@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskManager.Core;
 using TaskManager.Core.Abstractions;
@@ -16,15 +17,17 @@ public class TaskController : ControllerBase
         _taskService = taskService;
     }
 
+
     [HttpGet("{id:Guid}")]
     public async Task<ActionResult<MyTask>> GetTask(Guid id)
     {
         var task = await _taskService.GetTask(id);
-        
+
         return Ok(task);
     }
 
-    [HttpGet]
+    
+    [HttpGet, Authorize]
     public async Task<ActionResult<List<TaskResponse>>> GetTasks()
     {
         var tasks = await _taskService.GetAllTasks();
