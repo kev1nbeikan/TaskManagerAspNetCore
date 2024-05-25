@@ -12,7 +12,8 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
-          "TaskManager.Core": "1.0.0"
+          "TaskManager.Core": "1.0.0",
+          "Users.Core": "1.0.0"
         },
         "runtime": {
           "TaskManager.DataAccess.dll": {}
@@ -1251,6 +1252,11 @@
         "runtime": {
           "TaskManager.Core.dll": {}
         }
+      },
+      "Users.Core/1.0.0": {
+        "runtime": {
+          "Users.Core.dll": {}
+        }
       }
     }
   },
@@ -2066,6 +2072,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "TaskManager.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Users.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

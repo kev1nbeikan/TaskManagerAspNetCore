@@ -2549,13 +2549,39 @@
           "Microsoft.EntityFrameworkCore": "8.0.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
-          "TaskManager.Core": "1.0.0"
+          "TaskManager.Core": "1.0.0",
+          "Users.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TaskManager.DataAccess.dll": {}
         },
         "runtime": {
           "bin/placeholder/TaskManager.DataAccess.dll": {}
+        }
+      },
+      "User.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.5",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
+          "Users.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/User.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/User.DataAccess.dll": {}
+        }
+      },
+      "Users.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Users.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Users.Core.dll": {}
         }
       }
     }
@@ -8004,6 +8030,16 @@
       "type": "project",
       "path": "../TaskManager.DataAccess/TaskManager.DataAccess.csproj",
       "msbuildProject": "../TaskManager.DataAccess/TaskManager.DataAccess.csproj"
+    },
+    "User.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../User.DataAccess/User.DataAccess.csproj",
+      "msbuildProject": "../User.DataAccess/User.DataAccess.csproj"
+    },
+    "Users.Core/1.0.0": {
+      "type": "project",
+      "path": "../Users.Core/Users.Core.csproj",
+      "msbuildProject": "../Users.Core/Users.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8019,7 +8055,9 @@
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.6.1",
       "Swashbuckle.AspNetCore.SwaggerUI >= 6.6.1",
       "TaskManager.Application >= 1.0.0",
-      "TaskManager.DataAccess >= 1.0.0"
+      "TaskManager.DataAccess >= 1.0.0",
+      "User.DataAccess >= 1.0.0",
+      "Users.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8057,6 +8095,12 @@
             },
             "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager.DataAccess\\TaskManager.DataAccess.csproj": {
               "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager.DataAccess\\TaskManager.DataAccess.csproj"
+            },
+            "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\User.DataAccess\\User.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\User.DataAccess\\User.DataAccess.csproj"
+            },
+            "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\Users.Core\\Users.Core.csproj": {
+              "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\Users.Core\\Users.Core.csproj"
             }
           }
         }
@@ -8065,6 +8109,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {

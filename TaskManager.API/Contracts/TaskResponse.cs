@@ -9,10 +9,3 @@ public record TaskResponse(
     MyTaskStatus Status,
     DateTime CreatedDate,
     DateTime DueDate);
-
-public record TaskRequest(
-    
-    string Title,
-    string Description,
-    MyTaskStatus Status,
-    DateTime DueDate);

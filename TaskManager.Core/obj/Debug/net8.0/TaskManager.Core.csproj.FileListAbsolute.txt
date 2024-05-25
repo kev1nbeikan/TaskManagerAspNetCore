@@ -9,3 +9,4 @@ C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\obj\Debug\net
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\obj\Debug\net8.0\refint\TaskManager.Core.dll
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\obj\Debug\net8.0\TaskManager.Core.pdb
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\obj\Debug\net8.0\ref\TaskManager.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\obj\Debug\net8.0\TaskManager.Core.sourcelink.json

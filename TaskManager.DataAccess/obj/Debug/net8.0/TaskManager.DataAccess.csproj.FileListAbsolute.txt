@@ -15,3 +15,6 @@ C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Deb
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.pdb
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.genruntimeconfig.cache
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\ref\TaskManager.DataAccess.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\bin\Debug\net8.0\Users.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\bin\Debug\net8.0\Users.Core.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.DataAccess\obj\Debug\net8.0\TaskManager.DataAccess.sourcelink.json

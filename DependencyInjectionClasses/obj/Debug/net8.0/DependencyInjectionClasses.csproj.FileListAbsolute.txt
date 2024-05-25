@@ -10,3 +10,4 @@ C:\Users\KevinBacon\RiderProjects\WebApplication3\DependencyInjectionClasses\obj
 C:\Users\KevinBacon\RiderProjects\WebApplication3\DependencyInjectionClasses\obj\Debug\net8.0\refint\DependencyInjectionClasses.dll
 C:\Users\KevinBacon\RiderProjects\WebApplication3\DependencyInjectionClasses\obj\Debug\net8.0\DependencyInjectionClasses.pdb
 C:\Users\KevinBacon\RiderProjects\WebApplication3\DependencyInjectionClasses\obj\Debug\net8.0\ref\DependencyInjectionClasses.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\DependencyInjectionClasses\obj\Debug\net8.0\DependencyInjectionClasses.sourcelink.json

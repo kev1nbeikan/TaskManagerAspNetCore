@@ -2190,6 +2190,16 @@
         "runtime": {
           "bin/placeholder/TaskManager.Core.dll": {}
         }
+      },
+      "Users.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Users.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Users.Core.dll": {}
+        }
       }
     }
   },
@@ -6882,6 +6892,11 @@
       "type": "project",
       "path": "../TaskManager.Core/TaskManager.Core.csproj",
       "msbuildProject": "../TaskManager.Core/TaskManager.Core.csproj"
+    },
+    "Users.Core/1.0.0": {
+      "type": "project",
+      "path": "../Users.Core/Users.Core.csproj",
+      "msbuildProject": "../Users.Core/Users.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6890,7 +6905,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.5",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.4",
       "Npgsql.EntityFrameworkCore.PostgreSQL.Design >= 1.1.0",
-      "TaskManager.Core >= 1.0.0"
+      "TaskManager.Core >= 1.0.0",
+      "Users.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6922,6 +6938,9 @@
           "projectReferences": {
             "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager.Core\\TaskManager.Core.csproj": {
               "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager.Core\\TaskManager.Core.csproj"
+            },
+            "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\Users.Core\\Users.Core.csproj": {
+              "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\Users.Core\\Users.Core.csproj"
             }
           }
         }
@@ -6930,6 +6949,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {

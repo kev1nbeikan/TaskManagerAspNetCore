@@ -3,6 +3,7 @@ using TaskManager.Application.Services;
 using TaskManager.Core.Abstractions;
 using TaskManager.DataAccess;
 using TaskManager.DataAccess.Repositories;
+using User.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,10 @@ builder.Services.AddScoped<ITaskRepository, TasksRepository>();
 Console.WriteLine(builder.Configuration.GetConnectionString(nameof(TaskManagerDbContext)));
 
 builder.Services.AddDbContext<TaskManagerDbContext>(
+    options => { options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(TaskManagerDbContext))); }
+);
+
+builder.Services.AddDbContext<UserDbContext>(
     options => { options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(TaskManagerDbContext))); }
 );
 
