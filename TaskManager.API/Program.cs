@@ -1,9 +1,14 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Application.Services;
 using TaskManager.Core.Abstractions;
 using TaskManager.DataAccess;
 using TaskManager.DataAccess.Repositories;
+using User.Application.Service;
 using User.DataAccess;
+using User.DataAccess.Repositories;
+using User.Infastructure;
+using Users.Core.Abstractions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,8 +22,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<ITaskRepository, TasksRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IJwtProvider, JwtProvider>();
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
-Console.WriteLine(builder.Configuration.GetConnectionString(nameof(TaskManagerDbContext)));
+Console.WriteLine(builder.Configuration.GetSection("JwtOptions:SecretKey").Value);
 
 builder.Services.AddDbContext<TaskManagerDbContext>(
     options => { options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(TaskManagerDbContext))); }

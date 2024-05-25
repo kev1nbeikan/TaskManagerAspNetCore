@@ -17,18 +17,27 @@ public class UserService : IUserService
     }
 
 
-    public async Task Register(string userName, string email, string passwordHash)
+    public async Task<Users.Core.User?> Register(string userName, string email, string passwordHash)
     {
+        var user = await _userRepository.GetByEmail(email);
+
+        if (user != null)
+        {
+            throw new Exception("user already exists");
+        }
+
         var hashedPassword = _passwordHasher.Generate(passwordHash);
 
         var result = Users.Core.User.Create(Guid.NewGuid(), userName, email, hashedPassword);
 
-        if (result.error != null)
+        if (result.error == null)
         {
             throw new Exception(result.error);
         }
 
         await _userRepository.Add(result.user!);
+
+        return user;
     }
 
     public async Task<string> Login(string email, string password)

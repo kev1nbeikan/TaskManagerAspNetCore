@@ -17,17 +17,24 @@ public class UserController : ControllerBase
 
 
     [HttpPost("login")]
-    public async Task<IActionResult> Post(UserLoginRequest request)
+    public async Task<ActionResult<string>> Login(UserLoginRequest request)
     {
         var result = await _userService.Login(request.Email, request.Password);
         return Ok(result);
     }
-    
+
 
     [HttpPost("register")]
-    public async Task<IActionResult> Post(UserRegisterRequest request)
+    public async Task<IActionResult> Register(UserRegisterRequest request)
     {
-        await _userService.Register(request.UserName, request.Email, request.Password);
-        return Ok();
+        try
+        {
+            var user = await _userService.Register(request.UserName, request.Email, request.Password);
+            return Ok(user);
+        }
+        catch (Exception e) when (e.Message is "user already exists")
+        {
+            return BadRequest(e.Message);
+        }
     }
 }
