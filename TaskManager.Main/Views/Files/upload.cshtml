@@ -1,0 +1,25 @@
+@page
+@model WebApplication3.Views.Files.upload
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+    <h2>Выберите файл для загрузки</h2>
+    <form action="files/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="uploads"/><br>
+        <input type="file" name="uploads"/><br>
+        <input type="file" name="uploads"/><br>
+        <input type="submit" value="Загрузить"/>
+    </form>
+</div>
+</body>
+</html>
