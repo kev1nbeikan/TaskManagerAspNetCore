@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskManager.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+622c9114eb8f2dc15dc4aebded6a104e20f5d6fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+783004509c0a922b8447ae52879de619ce9a2473")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskManager.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskManager.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,24 +1,18 @@
-@page
-@model WebApplication3.Views.Files.upload
-
-@{
-    Layout = null;
-}
+@model WebApplication3.Contracts.UserRespone
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title></title>
+    <title>Загрузка файлов</title>
 </head>
 <body>
 <div>
-    <h2>Выберите файл для загрузки</h2>
+    <h1>Привет, @Model.UserName!</h1>
+    <h2>Выберите файлы для загрузки</h2>
     <form action="files/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="uploads"/><br>
-        <input type="file" name="uploads"/><br>
-        <input type="file" name="uploads"/><br>
-        <input type="submit" value="Загрузить"/>
+        <input type="file" name="uploads" multiple /><br> <br>
+        <input type="submit" value="Загрузить" />
     </form>
 </div>
 </body>

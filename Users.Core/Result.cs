@@ -1,4 +1,4 @@
-namespace Users.Core.Abstractions;
+namespace Users.Core;
 
 public class Result<T>
 {

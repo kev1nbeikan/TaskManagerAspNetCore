@@ -59,4 +59,9 @@ public class UserService : IUserService
 
         return (token, null);
     }
+
+    public async Task<Users.Core.User?> getUser(Guid id)
+    {
+        return await _userRepository.GetById(id);
+    }
 }

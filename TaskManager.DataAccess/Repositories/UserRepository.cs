@@ -36,4 +36,11 @@ public class UserRepository : IUserRepository
 
         return userEntity?.ToCoreUser();
     }
+
+    public async Task<Users.Core.User?> GetById(Guid id)
+    {
+        var userEntity = await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+
+        return userEntity?.ToCoreUser();
+    }
 }

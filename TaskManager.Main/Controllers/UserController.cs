@@ -1,13 +1,10 @@
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TaskManager.Core;
 using User.Application.Service;
 using WebApplication3.Contracts;
 using WebApplication3.Extentions;
 
-namespace Users.Api.Controllers;
+namespace WebApplication3.Controllers;
 
 [ApiController]
 [Route("[controller]")]

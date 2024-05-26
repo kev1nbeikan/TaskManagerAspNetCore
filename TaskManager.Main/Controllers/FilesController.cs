@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using User.Application.Service;
+using WebApplication3.Contracts;
+using WebApplication3.Extentions;
 
 namespace WebApplication3.Controllers;
 
@@ -8,19 +11,30 @@ public class FilesController : Controller
 {
     private readonly ILogger<FilesController> _logger;
 
-    public FilesController(ILogger<FilesController> logger)
+    private readonly IUserService _userService;
+
+    public FilesController(ILogger<FilesController> logger, IUserService userService)
     {
         _logger = logger;
+        _userService = userService;
     }
 
+
     [HttpGet]
-    public IActionResult Get()
+    public async Task<IActionResult> Get()
     {
         var response = HttpContext.Response;
 
         response.ContentType = "text/html; charset=utf-8";
+        var user = await _userService.getUser(User.UserId());
 
-        return View("upload");
+        if (user == null)
+        {
+            user = Users.Core.User.Create(userId: Guid.Empty, userName: "Guest", email: "Guest", passwordHash: "Guest")
+                .user;
+        }
+
+        return View("upload", user.ToUserRespone());
     }
 
 

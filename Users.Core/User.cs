@@ -1,5 +1,4 @@
-﻿using Users.Core.Abstractions;
-
+﻿
 namespace Users.Core;
 
 public class User
