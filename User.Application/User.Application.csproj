@@ -10,4 +10,16 @@
       <ProjectReference Include="..\Users.Core\Users.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="obj\**" />
+    </ItemGroup>
+
 </Project>
