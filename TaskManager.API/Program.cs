@@ -5,7 +5,6 @@ using TaskManager.Core.Abstractions;
 using TaskManager.DataAccess;
 using TaskManager.DataAccess.Repositories;
 using User.Application.Service;
-using User.DataAccess;
 using User.Infastructure;
 using Users.Core.Abstractions;
 using WebApplication3.Extentions;
@@ -13,7 +12,6 @@ using WebApplication3.Extentions;
 var builder = WebApplication.CreateBuilder(args);
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-
 
 
 // Add services to the container.
@@ -41,10 +39,6 @@ builder.Services.AddDbContext<TaskManagerDbContext>(
     options => { options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(TaskManagerDbContext))); }
 );
 
-builder.Services.AddDbContext<UserDbContext>(
-    options => { options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(TaskManagerDbContext))); }
-);
-
 
 var app = builder.Build();
 
@@ -59,7 +53,6 @@ if (app.Environment.IsDevelopment())
 }
 
 // app.UseHttpsRedirection();
-
 
 
 app.MapControllers();

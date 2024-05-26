@@ -14,7 +14,9 @@ public class TaskManagerDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new TaskConfiguration());
+        modelBuilder.ApplyConfiguration(new UserConfiguration());
     }
 
     public DbSet<TaskEntity> Tasks { get; set; }
+    public DbSet<UserEntity> Users { get; set; }
 }

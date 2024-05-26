@@ -1,16 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using TaskManager.DataAccess.Enities;
 using TaskManager.DataAccess.Extentions;
-using User.DataAccess;
 using Users.Core.Abstractions;
 
 namespace TaskManager.DataAccess.Repositories;
 
 public class UserRepository : IUserRepository
 {
-    private readonly UserDbContext _dbContext;
+    private readonly TaskManagerDbContext _dbContext;
 
-    public UserRepository(UserDbContext dbContext)
+    public UserRepository(TaskManagerDbContext dbContext)
     {
         _dbContext = dbContext;
     }

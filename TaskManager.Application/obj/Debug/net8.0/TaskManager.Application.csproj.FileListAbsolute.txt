@@ -14,3 +14,5 @@ C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\obj\De
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.pdb
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\obj\Debug\net8.0\ref\TaskManager.Application.dll
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.sourcelink.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Users.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Users.Core.pdb

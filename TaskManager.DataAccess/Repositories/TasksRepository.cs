@@ -18,7 +18,8 @@ public class TasksRepository : ITaskRepository
     {
         var tasksEntities = await _dbContext.Tasks.AsNoTracking().ToListAsync();
         return tasksEntities
-            .Select(x => MyTask.Create(x.Id, x.Title, x.Description, x.Status, x.CreatedDate, x.DueDate).MyTask)
+            .Select(x => MyTask.Create(x.Id, x.Title, x.Description, x.Status, x.CreatedDate, x.DueDate, x.UserId)
+                .MyTask)
             .ToList();
     }
 
@@ -31,7 +32,8 @@ public class TasksRepository : ITaskRepository
             Description = myTask.Description,
             Status = myTask.Status,
             CreatedDate = myTask.CreatedDate,
-            DueDate = myTask.DueDate
+            DueDate = myTask.DueDate,
+            UserId = myTask.UserId
         };
         await _dbContext.Tasks.AddAsync(taskEntity);
         await _dbContext.SaveChangesAsync();
@@ -63,6 +65,26 @@ public class TasksRepository : ITaskRepository
         return taskEntity is null
             ? (null!, "Task not found")
             : MyTask.Create(taskEntity.Id, taskEntity.Title, taskEntity.Description, taskEntity.Status,
-                taskEntity.CreatedDate, taskEntity.DueDate);
+                taskEntity.CreatedDate, taskEntity.DueDate, taskEntity.UserId);
+    }
+
+    public async Task<(MyTask myTask, string Error)> GetByUserAndTaskId(Guid id, Guid userId)
+    {
+        var taskEntity = await _dbContext.Tasks
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.Id == id && x.UserId == userId);
+        return taskEntity is null
+            ? (null!, "Task not found")
+            : MyTask.Create(taskEntity.Id, taskEntity.Title, taskEntity.Description, taskEntity.Status,
+                taskEntity.CreatedDate, taskEntity.DueDate, taskEntity.UserId);
+    }
+
+    public async Task<List<MyTask>> GetAllTaskByUserId(Guid userId)
+    {
+        var tasksEntities = await _dbContext.Tasks.AsNoTracking().ToListAsync();
+        return tasksEntities.Where(x => x.UserId == userId)
+            .Select(x => MyTask.Create(x.Id, x.Title, x.Description, x.Status, x.CreatedDate, x.DueDate, x.UserId)
+                .MyTask)
+            .ToList();
     }
 }

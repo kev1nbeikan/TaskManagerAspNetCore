@@ -15,8 +15,16 @@
         }
       },
       "TaskManager.Core/1.0.0": {
+        "dependencies": {
+          "Users.Core": "1.0.0"
+        },
         "runtime": {
           "TaskManager.Core.dll": {}
+        }
+      },
+      "Users.Core/1.0.0": {
+        "runtime": {
+          "Users.Core.dll": {}
         }
       }
     }
@@ -28,6 +36,11 @@
       "sha512": ""
     },
     "TaskManager.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Users.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

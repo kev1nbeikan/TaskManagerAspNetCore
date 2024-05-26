@@ -38,7 +38,7 @@ public class UserController : ControllerBase
     {
         var (user, error) = await _userService.Register(request.UserName, request.Email, request.Password);
 
-        return string.IsNullOrEmpty(error) ? Ok(user) : BadRequest(error);
+        return string.IsNullOrEmpty(error) ? Ok() : BadRequest(error);
     }
 
     [Authorize]

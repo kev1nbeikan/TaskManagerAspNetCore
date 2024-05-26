@@ -1249,6 +1249,9 @@
         }
       },
       "TaskManager.Core/1.0.0": {
+        "dependencies": {
+          "Users.Core": "1.0.0"
+        },
         "runtime": {
           "TaskManager.Core.dll": {}
         }

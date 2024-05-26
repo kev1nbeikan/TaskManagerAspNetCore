@@ -17,8 +17,10 @@ public class MyTask
 
     public DateTime DueDate { get; }
 
-    public MyTask(Guid id, string title, string description, MyTaskStatus status, DateTime createdDate,
-        DateTime dueDate)
+    public Guid UserId { get; }
+
+    private MyTask(Guid id, string title, string description, MyTaskStatus status, DateTime createdDate,
+        DateTime dueDate, Guid userId)
     {
         Id = id;
         Title = title;
@@ -26,10 +28,11 @@ public class MyTask
         Status = status;
         CreatedDate = createdDate;
         DueDate = dueDate;
+        UserId = userId;
     }
 
     public static (MyTask MyTask, string Error) Create(Guid id, string title, string description, MyTaskStatus status,
-        DateTime createdDate, DateTime dueDate)
+        DateTime createdDate, DateTime dueDate, Guid userId)
     {
         var error = string.Empty;
 
@@ -38,8 +41,12 @@ public class MyTask
             error = "Title cannot be empty";
         }
 
-        var myTask = new MyTask(id, title, description, status, createdDate, dueDate);
 
-        return (myTask, error)!;
+        if (userId == Guid.Empty) error = "User cannot be empty";
+
+
+        var myTask = new MyTask(id, title, description, status, createdDate, dueDate, userId);
+
+        return (myTask, error);
     }
 }

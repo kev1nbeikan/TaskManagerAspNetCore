@@ -31,7 +31,7 @@ public class UserService : IUserService
 
         var result = Users.Core.User.Create(Guid.NewGuid(), userName, email, hashedPassword);
 
-        if (result.error != null)
+        if (!string.IsNullOrEmpty(result.error))
         {
             return (null, result.error);
         }
