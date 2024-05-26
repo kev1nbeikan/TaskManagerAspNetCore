@@ -2747,27 +2747,13 @@
           "bin/placeholder/User.Application.dll": {}
         }
       },
-      "User.DataAccess/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.5",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
-          "Users.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/User.DataAccess.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/User.DataAccess.dll": {}
-        }
-      },
       "User.Infastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.5",
+          "TaskManager.Core": "1.0.0",
           "Users.Core": "1.0.0"
         },
         "compile": {
@@ -8484,11 +8470,6 @@
       "path": "../User.Application/User.Application.csproj",
       "msbuildProject": "../User.Application/User.Application.csproj"
     },
-    "User.DataAccess/1.0.0": {
-      "type": "project",
-      "path": "../User.DataAccess/User.DataAccess.csproj",
-      "msbuildProject": "../User.DataAccess/User.DataAccess.csproj"
-    },
     "User.Infastructure/1.0.0": {
       "type": "project",
       "path": "../User.Infastructure/User.Infastructure.csproj",
@@ -8517,7 +8498,6 @@
       "TaskManager.Application >= 1.0.0",
       "TaskManager.DataAccess >= 1.0.0",
       "User.Application >= 1.0.0",
-      "User.DataAccess >= 1.0.0",
       "User.Infastructure >= 1.0.0",
       "Users.Core >= 1.0.0"
     ]
@@ -8561,9 +8541,6 @@
             "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\User.Application\\User.Application.csproj": {
               "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\User.Application\\User.Application.csproj"
             },
-            "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\User.DataAccess\\User.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\User.DataAccess\\User.DataAccess.csproj"
-            },
             "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\User.Infastructure\\User.Infastructure.csproj": {
               "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\User.Infastructure\\User.Infastructure.csproj"
             },
@@ -8577,6 +8554,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {

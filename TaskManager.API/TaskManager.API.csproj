@@ -30,7 +30,6 @@
         <ProjectReference Include="..\TaskManager.Application\TaskManager.Application.csproj"/>
         <ProjectReference Include="..\TaskManager.DataAccess\TaskManager.DataAccess.csproj"/>
         <ProjectReference Include="..\User.Application\User.Application.csproj" />
-        <ProjectReference Include="..\User.DataAccess\User.DataAccess.csproj" />
         <ProjectReference Include="..\User.Infastructure\User.Infastructure.csproj" />
         <ProjectReference Include="..\Users.Core\Users.Core.csproj" />
     </ItemGroup>

@@ -17,45 +17,46 @@ public class UserService : IUserService
     }
 
 
-    public async Task<Users.Core.User?> Register(string userName, string email, string passwordHash)
+    public async Task<(Users.Core.User? user, string? error)> Register(string userName, string email,
+        string passwordHash)
     {
         var user = await _userRepository.GetByEmail(email);
 
         if (user != null)
         {
-            throw new Exception("user already exists");
+            return (null, "user already exists");
         }
 
         var hashedPassword = _passwordHasher.Generate(passwordHash);
 
         var result = Users.Core.User.Create(Guid.NewGuid(), userName, email, hashedPassword);
 
-        if (result.error == null)
+        if (result.error != null)
         {
-            throw new Exception(result.error);
+            return (null, result.error);
         }
 
         await _userRepository.Add(result.user!);
 
-        return user;
+        return (result.user, null);
     }
 
-    public async Task<string> Login(string email, string password)
+    public async Task<(string? token, string? error)> Login(string email, string password)
     {
         var user = await _userRepository.GetByEmail(email);
 
         if (user == null)
         {
-            throw new Exception("user not found");
+            return (null, "user not found");
         }
 
         if (!_passwordHasher.Verify(password, user.PasswordHash))
         {
-            throw new Exception("incorrect password");
+            return (null, "invalid password");
         }
 
         var token = _jwtProvider.GenerateToken(user);
 
-        return token;
+        return (token, null);
     }
 }

@@ -15,5 +15,9 @@ public class TaskConfiguration : IEntityTypeConfiguration<TaskEntity>
         builder.Property(x => x.Title).IsRequired().HasMaxLength(MyTask.MAX_TITLE_LENGTH);
         builder.Property(x => x.CreatedDate).IsRequired();
         builder.Property(x => x.Status).IsRequired();
+
+        builder.HasOne(x => x.User)
+            .WithMany(x => x.Tasks)
+            .HasForeignKey(x => x.UserId);
     }
 }

@@ -6,7 +6,6 @@ using TaskManager.DataAccess;
 using TaskManager.DataAccess.Repositories;
 using User.Application.Service;
 using User.DataAccess;
-using User.DataAccess.Repositories;
 using User.Infastructure;
 using Users.Core.Abstractions;
 using WebApplication3.Extentions;

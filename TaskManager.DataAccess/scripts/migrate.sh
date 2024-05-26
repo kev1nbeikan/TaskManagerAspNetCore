@@ -1,6 +1,6 @@
-dotnet ef migrations add init  -s .\TaskManager.API\ -p .\TaskManager.DataAccess\
+dotnet ef migrations add init --context TaskManagerDbContext -s .\TaskManager.API\ -p .\TaskManager.DataAccess\
  
  
-dotnet ef database update -s .\TaskManager.API\ -p .\TaskManager.DataAccess\
+dotnet ef database update --context TaskManagerDbContext -s .\TaskManager.API\ -p .\TaskManager.DataAccess\
 
 

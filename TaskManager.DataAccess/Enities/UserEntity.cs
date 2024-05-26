@@ -1,4 +1,4 @@
-namespace User.DataAccess.Entities;
+namespace TaskManager.DataAccess.Enities;
 
 public class UserEntity
 {

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using User.DataAccess.Configuration;
-using User.DataAccess.Entities;
+using TaskManager.DataAccess.Configuration;
+using UserEntity = TaskManager.DataAccess.Enities.UserEntity;
 
 namespace User.DataAccess;
 

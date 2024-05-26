@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using User.DataAccess.Entities;
-using User.DataAccess.Extentions;
+using TaskManager.DataAccess.Enities;
+using TaskManager.DataAccess.Extentions;
+using User.DataAccess;
 using Users.Core.Abstractions;
 
-namespace User.DataAccess.Repositories;
+namespace TaskManager.DataAccess.Repositories;
 
 public class UserRepository : IUserRepository
 {
