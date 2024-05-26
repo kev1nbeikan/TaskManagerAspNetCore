@@ -1,5 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TaskManager.Core;
 using TaskManager.Core.Abstractions;
 using WebApplication3.Contracts;
@@ -13,9 +18,9 @@ namespace WebApplication3.Controllers;
 public class TaskController : ControllerBase
 {
     private readonly ITaskService _taskService;
-    private readonly ILogger<Task> _logger;
+    private readonly ILogger<TaskController> _logger;
 
-    public TaskController(ITaskService taskService, ILogger<Task> logger)
+    public TaskController(ITaskService taskService, ILogger<TaskController> logger)
     {
         _taskService = taskService;
         _logger = logger;
@@ -34,7 +39,6 @@ public class TaskController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<TaskResponse>>> GetTasks()
     {
-        
         _logger.LogInformation("Get tasks by user with {id}", User.UserId());
 
         var tasks = await _taskService.GetAllTaskByUserId(User.UserId());
@@ -46,9 +50,6 @@ public class TaskController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<int>> CreateTask(TaskRequest request)
     {
-        
-        
-
         var (myTask, error) = MyTask.Create(
             Guid.NewGuid(), request.Title, request.Description, request.Status, request.DueDate, DateTime.Now,
             User.UserId());
@@ -58,12 +59,12 @@ public class TaskController : ControllerBase
             return BadRequest(error);
         }
 
-        
+
         var id = await _taskService.CreateTask(myTask);
-        
+
         _logger.LogInformation("Create task with id={id} by user with {id}", id, User.UserId());
 
-        
+
         return Ok(id);
     }
 
@@ -86,7 +87,7 @@ public class TaskController : ControllerBase
             return BadRequest(error);
         }
 
-        
+
         _logger.LogInformation("Update task with id={id} by user with {id}", id, User.UserId());
 
 
@@ -103,9 +104,9 @@ public class TaskController : ControllerBase
         {
             return NotFound();
         }
-        
+
         _logger.LogInformation("Delete task with id={id} by user with {id}", id, User.UserId());
-        
+
         return Ok(await _taskService.Delete(id));
     }
 }
