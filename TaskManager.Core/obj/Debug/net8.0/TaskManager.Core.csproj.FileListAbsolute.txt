@@ -14,3 +14,9 @@ C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\bin\Debug\net
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\bin\Debug\net8.0\Users.Core.pdb
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\obj\Debug\net8.0\TaskManager.Core.csproj.AssemblyReference.cache
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\obj\Debug\net8.0\TaskMana.7E897A24.Up2Date
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Core\bin\Debug\net8.0\Microsoft.Extensions.Features.dll

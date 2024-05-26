@@ -16,3 +16,9 @@ C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\obj\De
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.sourcelink.json
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Users.Core.dll
 C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Users.Core.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\TaskManager.Application\bin\Debug\net8.0\Microsoft.Extensions.Features.dll

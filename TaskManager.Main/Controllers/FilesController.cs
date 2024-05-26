@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TaskManager.Core.Abstractions;
 using User.Application.Service;
 using WebApplication3.Contracts;
 using WebApplication3.Extentions;
@@ -12,11 +13,13 @@ public class FilesController : Controller
     private readonly ILogger<FilesController> _logger;
 
     private readonly IUserService _userService;
+    private readonly IFileService _fileService;
 
-    public FilesController(ILogger<FilesController> logger, IUserService userService)
+    public FilesController(ILogger<FilesController> logger, IUserService userService, IFileService fileService)
     {
         _logger = logger;
         _userService = userService;
+        _fileService = fileService;
     }
 
 
@@ -26,15 +29,11 @@ public class FilesController : Controller
         var response = HttpContext.Response;
 
         response.ContentType = "text/html; charset=utf-8";
-        var user = await _userService.getUser(User.UserId());
+        var user = await _userService.getUser(User.UserId()) ??
+                   Users.Core.User.Create(userId: Guid.Empty, userName: "Guest", email: "Guest", passwordHash: "Guest")
+                       .user;
 
-        if (user == null)
-        {
-            user = Users.Core.User.Create(userId: Guid.Empty, userName: "Guest", email: "Guest", passwordHash: "Guest")
-                .user;
-        }
-
-        return View("upload", user.ToUserRespone());
+        return View("upload", user!.ToUserRespone());
     }
 
 
@@ -45,21 +44,12 @@ public class FilesController : Controller
 
         IFormFileCollection files = request.Form.Files;
 
-        var uploadPath = $"{Directory.GetCurrentDirectory()}/uploads";
-
-
-        Directory.CreateDirectory(uploadPath);
+        _fileService.SetPathUpload($"{Directory.GetCurrentDirectory()}/uploads");
 
         foreach (var file in files)
         {
-            // путь к папке uploads
-            string fullPath = $"{uploadPath}/{file.FileName}";
-
-            using (var fileStream = new FileStream(fullPath, FileMode.Create))
-            {
-                await file.CopyToAsync(fileStream);
-                _logger.LogInformation("Save file in path {path}", fullPath);
-            }
+            await _fileService.SaveFile(file);
+            _logger.LogInformation("Save file in path");
         }
 
         return Ok("Файлы успешно загружены");

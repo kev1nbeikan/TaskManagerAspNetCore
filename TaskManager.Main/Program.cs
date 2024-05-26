@@ -9,6 +9,7 @@ using TaskManager.Application.Services;
 using TaskManager.Core.Abstractions;
 using TaskManager.DataAccess;
 using TaskManager.DataAccess.Repositories;
+using TaskManager.Infastructure;
 using User.Application.Service;
 using User.Infastructure;
 using Users.Core.Abstractions;
@@ -39,15 +40,15 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IJwtProvider, JwtProvider>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+builder.Services.AddScoped<ITaskService, TaskService>();
+builder.Services.AddScoped<IFileService, FilesService>();
+builder.Services.AddScoped<IFileSaver, FileSaver>();
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(JwtOptions)));
 
 builder.Services.AddDbContext<TaskManagerDbContext>(
     options => { options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(TaskManagerDbContext))); }
 );
-
-
-
 
 
 var app = builder.Build();
@@ -63,7 +64,6 @@ if (app.Environment.IsDevelopment())
 }
 
 // app.UseHttpsRedirection();
-
 
 
 app.MapControllers();
