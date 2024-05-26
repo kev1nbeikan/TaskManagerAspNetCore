@@ -8,7 +8,7 @@ namespace TaskManager.DataAccess.Repositories;
 public class TasksRepository : ITaskRepository
 {
     private readonly TaskManagerDbContext _dbContext;
-
+    
     public TasksRepository(TaskManagerDbContext dbContext)
     {
         _dbContext = dbContext;

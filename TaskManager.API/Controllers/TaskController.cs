@@ -13,18 +13,20 @@ namespace WebApplication3.Controllers;
 public class TaskController : ControllerBase
 {
     private readonly ITaskService _taskService;
+    private readonly ILogger<Task> _logger;
 
-    public TaskController(ITaskService taskService)
+    public TaskController(ITaskService taskService, ILogger<Task> logger)
     {
         _taskService = taskService;
+        _logger = logger;
     }
 
 
     [HttpGet("{id:Guid}")]
     public async Task<ActionResult<MyTask>> GetTask(Guid id)
     {
+        _logger.LogInformation("Get task with id={id} by user with {id}", id, User.UserId());
         var task = await _taskService.GetTask(id, User.UserId());
-
         return task == null ? NotFound() : Ok(task);
     }
 
@@ -32,6 +34,9 @@ public class TaskController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<TaskResponse>>> GetTasks()
     {
+        
+        _logger.LogInformation("Get tasks by user with {id}", User.UserId());
+
         var tasks = await _taskService.GetAllTaskByUserId(User.UserId());
 
         return Ok(tasks.Select(x =>
@@ -41,16 +46,24 @@ public class TaskController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<int>> CreateTask(TaskRequest request)
     {
+        
+        
+
         var (myTask, error) = MyTask.Create(
             Guid.NewGuid(), request.Title, request.Description, request.Status, request.DueDate, DateTime.Now,
             User.UserId());
-    
+
         if (!string.IsNullOrEmpty(error))
         {
             return BadRequest(error);
         }
 
+        
         var id = await _taskService.CreateTask(myTask);
+        
+        _logger.LogInformation("Create task with id={id} by user with {id}", id, User.UserId());
+
+        
         return Ok(id);
     }
 
@@ -73,6 +86,9 @@ public class TaskController : ControllerBase
             return BadRequest(error);
         }
 
+        
+        _logger.LogInformation("Update task with id={id} by user with {id}", id, User.UserId());
+
 
         return Ok(await _taskService.Update(myTask));
     }
@@ -87,7 +103,9 @@ public class TaskController : ControllerBase
         {
             return NotFound();
         }
-
+        
+        _logger.LogInformation("Delete task with id={id} by user with {id}", id, User.UserId());
+        
         return Ok(await _taskService.Delete(id));
     }
 }
