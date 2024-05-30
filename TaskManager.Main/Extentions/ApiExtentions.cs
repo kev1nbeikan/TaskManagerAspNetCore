@@ -15,7 +15,6 @@ public static class ApiExtentions
     public static void AddApiAuthentication(this IServiceCollection services,
         JwtOptions? jwtOptions)
     {
-
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
             JwtBearerDefaults.AuthenticationScheme,
             options =>
@@ -37,9 +36,20 @@ public static class ApiExtentions
                         Console.WriteLine(context.Request.HttpContext.User.Identity?.IsAuthenticated);
                         return Task.CompletedTask;
                     },
-                    
                 };
             });
-        services.AddAuthorization();
+
+
+        services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminPolicy", policy =>
+                    policy.RequireClaim("Admin", "true")
+                );
+
+                options.AddPolicy("StudentPolicy", policy =>
+                    policy.RequireClaim("Student", "true")
+                );
+            }
+        );
     }
 }

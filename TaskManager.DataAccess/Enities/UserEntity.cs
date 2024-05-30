@@ -7,5 +7,7 @@ public class UserEntity
     public string Email { get; set; } = string.Empty;
     public string PasswordHash { get; set; } = string.Empty;
 
-    public IEnumerable<TaskEntity>? Tasks { get; set; } = [];
+    public ICollection<TaskEntity>? Tasks { get; set; } = [];
+
+    // public ICollection<RoleEntity>? Roles { get; set; } = [];
 }
