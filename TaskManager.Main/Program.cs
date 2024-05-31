@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using TaskManager.Application.Services;
 using TaskManager.Core.Abstractions;
 using TaskManager.DataAccess;
@@ -44,6 +45,14 @@ builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IFileService, FilesService>();
 builder.Services.AddScoped<IFileSaver, FileSaver>();
+
+builder.Services.AddScoped<ITaskRepository>(sp => // Регистрируем обычный TaskRepository
+{
+    var baseRepo = sp.GetRequiredService<TasksRepository>();
+    var cache = sp.GetRequiredService<IDistributedCache>();
+    return new TasksRepositoryWithCaching(baseRepo, cache);
+});
+
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(JwtOptions)));
 

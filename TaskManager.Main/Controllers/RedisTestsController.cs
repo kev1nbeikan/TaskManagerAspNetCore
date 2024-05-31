@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 using StackExchange.Redis;
 using WebApplication3.Contracts;
 
@@ -13,14 +14,21 @@ public class RedisTestsController(IDistributedCache cache) : ControllerBase
     public async Task<IActionResult> Get(string key)
     {
         var result = await cache.GetStringAsync(key);
-        return Ok(result);
+        if (string.IsNullOrEmpty(result))
+        {
+            return NotFound();
+        }
+
+        var jsonObject = JsonConvert.DeserializeObject<RedisRequest>(result);
+
+        return Ok(jsonObject);
     }
 
 
     [HttpPost]
-    public async Task<IActionResult> Get(RedisRequest request)
+    public async Task<IActionResult> Post(RedisRequest request)
     {
-        await cache.SetStringAsync(request.Key, request.Value.ToString());
+        await cache.SetStringAsync(request.Key, JsonConvert.SerializeObject(request));
         return Ok();
     }
 }
