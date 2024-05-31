@@ -19,7 +19,7 @@ public class MyTask
 
     public Guid UserId { get; }
 
-    private MyTask(Guid id, string title, string description, MyTaskStatus status, DateTime createdDate,
+    public MyTask(Guid id, string title, string description, MyTaskStatus status, DateTime createdDate,
         DateTime dueDate, Guid userId)
     {
         Id = id;

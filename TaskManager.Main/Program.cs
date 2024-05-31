@@ -36,23 +36,7 @@ builder.Services.AddAuthentication();
 builder.Services.AddApiAuthentication(builder.Configuration.GetSection(nameof(JwtOptions)).Get<JwtOptions>());
 
 
-builder.Services.AddScoped<ITaskService, TaskService>();
-builder.Services.AddScoped<ITaskRepository, TasksRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IJwtProvider, JwtProvider>();
-builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
-builder.Services.AddScoped<ITaskService, TaskService>();
-builder.Services.AddScoped<IFileService, FilesService>();
-builder.Services.AddScoped<IFileSaver, FileSaver>();
-
-builder.Services.AddScoped<ITaskRepository>(sp => // Регистрируем обычный TaskRepository
-{
-    var baseRepo = sp.GetRequiredService<TasksRepository>();
-    var cache = sp.GetRequiredService<IDistributedCache>();
-    return new TasksRepositoryWithCaching(baseRepo, cache);
-});
-
+builder.Services.AddDi();
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(JwtOptions)));
 

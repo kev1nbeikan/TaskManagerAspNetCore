@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Caching.Distributed;
 using TaskManager.Core;
 using TaskManager.Core.Abstractions;
+using TaskManager.Infastructure;
 
 namespace TaskManager.DataAccess.Repositories;
 
@@ -15,6 +16,7 @@ public class TasksRepositoryWithCaching(TasksRepository tasksRepository, ICache 
         var cachedResult = await _cache.GetAsync<T>(key);
         if (cachedResult != null)
         {
+            Console.WriteLine("cashed_result_returned");
             return cachedResult;
         }
         else
@@ -25,6 +27,16 @@ public class TasksRepositoryWithCaching(TasksRepository tasksRepository, ICache 
         }
     }
 
+    private async Task ClearCacheWithTask(MyTask myTask)
+    {
+        await _cache.RemoveAsync(
+            KeyCacheGenerator.GenerateKey(nameof(GetAllTaskByUserId), myTask.UserId.ToString()));
+        await _cache.RemoveAsync(KeyCacheGenerator.GenerateKey(nameof(GetByUserAndTaskId), myTask.Id.ToString(),
+            myTask.UserId.ToString()));
+        await _cache.RemoveAsync(KeyCacheGenerator.GenerateKey(nameof(Get), myTask.Id.ToString()));
+        await _cache.RemoveAsync(KeyCacheGenerator.GenerateKey(nameof(GetAll)));
+    }
+
     public async Task<List<MyTask>> GetAll()
     {
         return await GetFromCacheOrDataBase(nameof(GetAll), () => _tasksRepository.GetAll());
@@ -32,18 +44,35 @@ public class TasksRepositoryWithCaching(TasksRepository tasksRepository, ICache 
 
     public async Task<Guid> Create(MyTask myTask)
     {
-        return await GetFromCacheOrDataBase($"{nameof(Create)}_{myTask.Id}", () => _tasksRepository.Create(myTask));
+        var result = await _tasksRepository.Create(myTask);
+        if (result == Guid.Empty) return result;
+
+        await ClearCacheWithTask(myTask);
+
+        return result;
     }
 
 
     public async Task<Guid> Update(MyTask myTask)
     {
-        return await GetFromCacheOrDataBase($"{nameof(Update)}_{myTask.Id}", () => _tasksRepository.Update(myTask));
+        var result = await _tasksRepository.Update(myTask);
+        if (result == Guid.Empty) return result;
+
+        await ClearCacheWithTask(myTask);
+
+        return result;
     }
 
     public async Task<Guid> Delete(Guid id)
     {
-        return await GetFromCacheOrDataBase($"{nameof(Delete)}_{id}", () => _tasksRepository.Delete(id));
+        var task = await _tasksRepository.Get(id);
+
+        var result = await _tasksRepository.Delete(id);
+        if (result == Guid.Empty) return result;
+
+        await ClearCacheWithTask(task.myTask);
+
+        return result;
     }
 
     public async Task<(MyTask myTask, string Error)> Get(Guid id)
@@ -53,11 +82,13 @@ public class TasksRepositoryWithCaching(TasksRepository tasksRepository, ICache 
 
     public async Task<(MyTask myTask, string Error)> GetByUserAndTaskId(Guid id, Guid userId)
     {
-        return await GetFromCacheOrDataBase($"{nameof(GetByUserAndTaskId)}_{id}_{userId}",
+        return await GetFromCacheOrDataBase(
+            KeyCacheGenerator.GenerateKey(nameof(GetByUserAndTaskId), id.ToString(), userId.ToString()),
             () => _tasksRepository.GetByUserAndTaskId(id, userId));
     }
 
     public async Task<List<MyTask>> GetAllTaskByUserId(Guid userId)
-        => await GetFromCacheOrDataBase($"{nameof(GetAllTaskByUserId)}_{userId}",
+        => await GetFromCacheOrDataBase(
+            KeyCacheGenerator.GenerateKey(nameof(GetAllTaskByUserId), userId.ToString()),
             () => _tasksRepository.GetAllTaskByUserId(userId));
 }
