@@ -16,7 +16,6 @@ public class TasksRepositoryWithCaching(TasksRepository tasksRepository, ICache 
         var cachedResult = await _cache.GetAsync<T>(key);
         if (cachedResult != null)
         {
-            Console.WriteLine("cashed_result_returned");
             return cachedResult;
         }
         else
@@ -29,8 +28,7 @@ public class TasksRepositoryWithCaching(TasksRepository tasksRepository, ICache 
 
     private async Task ClearCacheWithTask(MyTask myTask)
     {
-        await _cache.RemoveAsync(
-            KeyCacheGenerator.GenerateKey(nameof(GetAllTaskByUserId), myTask.UserId.ToString()));
+        await _cache.RemoveAsync(KeyCacheGenerator.GenerateKey(nameof(GetAllTaskByUserId), myTask.UserId.ToString()));
         await _cache.RemoveAsync(KeyCacheGenerator.GenerateKey(nameof(GetByUserAndTaskId), myTask.Id.ToString(),
             myTask.UserId.ToString()));
         await _cache.RemoveAsync(KeyCacheGenerator.GenerateKey(nameof(Get), myTask.Id.ToString()));

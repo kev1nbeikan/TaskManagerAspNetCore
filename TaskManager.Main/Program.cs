@@ -1,18 +1,25 @@
+using System.Net;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Distributed;
-using TaskManager.Application.Services;
-using TaskManager.Core.Abstractions;
+using NLog;
+using NLog.Config;
+using NLog.Layouts;
+using NLog.Targets.ElasticSearch;
+using NLog.Targets.OpenSearch;
+using NLog.Web;
+using OpenSearch.Net;
+using Serilog;
+using Serilog.Events;
+using Serilog.Sinks.OpenSearch;
 using TaskManager.DataAccess;
-using TaskManager.DataAccess.Repositories;
-using TaskManager.Infastructure;
-using User.Application.Service;
 using User.Infastructure;
-using Users.Core.Abstractions;
 using WebApplication3.Extentions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
+
+builder.AddLogger();
 
 builder.Services.AddStackExchangeRedisCache(options =>
 {
@@ -45,6 +52,7 @@ builder.Services.AddDbContext<TaskManagerDbContext>(
 );
 
 
+builder.Host.UseNLog();
 var app = builder.Build();
 
 app.UseAuthentication();
@@ -61,5 +69,13 @@ if (app.Environment.IsDevelopment())
 
 
 app.MapControllers();
+
+var logger2 = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+
+logger2.Debug("Debug");
+logger2.Info("Info");
+logger2.Warn("Warn");
+logger2.Error("Error");
+logger2.Fatal("Fatal");
 
 app.Run();
