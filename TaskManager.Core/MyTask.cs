@@ -40,12 +40,17 @@ public class MyTask
         {
             error = "Title cannot be empty";
         }
+        else if (title.Length > MAX_TITLE_LENGTH)
+        {
+            error = "Title cannot be longer than " + MAX_TITLE_LENGTH + " characters";
+        }
 
 
         if (userId == Guid.Empty) error = "User cannot be empty";
 
 
         var myTask = new MyTask(id, title, description, status, createdDate, dueDate, userId);
+
 
         return (myTask, error);
     }

@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using TaskManager.Core;
 using TaskManager.Core.Abstractions;
 using WebApplication3.Contracts;
@@ -32,6 +27,7 @@ public class TaskController : ControllerBase
     {
         _logger.LogInformation("Get task with id={id} by user with {id}", id, User.UserId());
         var task = await _taskService.GetTask(id, User.UserId());
+
         return task == null ? NotFound() : Ok(task);
     }
 
@@ -89,6 +85,7 @@ public class TaskController : ControllerBase
 
 
         _logger.LogInformation("Update task with id={id} by user with {id}", id, User.UserId());
+        
 
 
         return Ok(await _taskService.Update(myTask));

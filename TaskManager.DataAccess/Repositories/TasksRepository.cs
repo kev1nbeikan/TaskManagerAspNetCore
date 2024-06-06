@@ -5,17 +5,12 @@ using TaskManager.DataAccess.Enities;
 
 namespace TaskManager.DataAccess.Repositories;
 
-public class TasksRepository : ITaskRepository
+public class TasksRepository(TaskManagerDbContext dbContext) : ITaskRepository
 {
-    private readonly TaskManagerDbContext _dbContext;
-    
-    public TasksRepository(TaskManagerDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
+    private readonly TaskManagerDbContext _dbContext = dbContext;
 
     public async Task<List<MyTask>> GetAll()
-    {
+    {   
         var tasksEntities = await _dbContext.Tasks.AsNoTracking().ToListAsync();
         return tasksEntities
             .Select(x => MyTask.Create(x.Id, x.Title, x.Description, x.Status, x.CreatedDate, x.DueDate, x.UserId)

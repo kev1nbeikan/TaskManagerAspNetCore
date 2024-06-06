@@ -33,5 +33,8 @@ public static class DiAddExtentions
 
         services.AddScoped<IFileService, FilesService>();
         services.AddScoped<IFileSaver, FileSaver>();
+
+        services.AddSingleton<INotifyHubLoggerService, NotifyHubLoggerService>();
+        services.AddSingleton<INotifyHubLogger, NotifyHubLogger>();
     }
 }

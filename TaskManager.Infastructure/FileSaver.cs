@@ -7,11 +7,7 @@ public class FileSaver : IFileSaver
 {
     public async Task Save(string fullPath, IFormFile formFile)
     {
-        using (var fileStream = new FileStream(fullPath, FileMode.Create))
-        {
-            await formFile.CopyToAsync(fileStream);
-        }
+        await using var fileStream = new FileStream(fullPath, FileMode.Create);
+        await formFile.CopyToAsync(fileStream);
     }
-    
-    
 }

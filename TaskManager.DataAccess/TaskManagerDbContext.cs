@@ -5,12 +5,8 @@ using TaskManager.DataAccess.Enities;
 
 namespace TaskManager.DataAccess;
 
-public class TaskManagerDbContext : DbContext
+public class TaskManagerDbContext(DbContextOptions<TaskManagerDbContext> options) : DbContext(options)
 {
-    public TaskManagerDbContext(DbContextOptions<TaskManagerDbContext> options) : base(options)
-    {
-    }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new TaskConfiguration());

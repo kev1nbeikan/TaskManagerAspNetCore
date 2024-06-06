@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "SqMmBtse2v/7mvkXTKMs1ykiLJkcVQeL+0mJJNlXC5VPjk9mW4dqnrv1+kySiGhS66uegDVHhUc90OE9EJ5chQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\NotifyHub.DataAccess\\NotifyHub.DataAccess.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KevinBacon\\.nuget\\packages\\confluent.kafka\\2.4.0\\confluent.kafka.2.4.0.nupkg.sha512",
+    "C:\\Users\\KevinBacon\\.nuget\\packages\\librdkafka.redist\\2.4.0\\librdkafka.redist.2.4.0.nupkg.sha512",
+    "C:\\Users\\KevinBacon\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\KevinBacon\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
