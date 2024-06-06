@@ -1,0 +1,16 @@
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\bin\Debug\net8.0\NotifyHub.DataAccess.deps.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\bin\Debug\net8.0\NotifyHub.DataAccess.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\bin\Debug\net8.0\NotifyHub.DataAccess.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\bin\Debug\net8.0\NotifyHub.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\bin\Debug\net8.0\NotifyHub.Core.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHub.DataAccess.csproj.AssemblyReference.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHub.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHub.DataAccess.AssemblyInfoInputs.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHub.DataAccess.AssemblyInfo.cs
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHub.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHub.DataAccess.sourcelink.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHu.B7F3628E.Up2Date
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHub.DataAccess.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\refint\NotifyHub.DataAccess.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\NotifyHub.DataAccess.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\NotifyHub.DataAccess\obj\Debug\net8.0\ref\NotifyHub.DataAccess.dll
