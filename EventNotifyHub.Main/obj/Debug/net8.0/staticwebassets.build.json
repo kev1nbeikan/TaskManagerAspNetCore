@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NWaRSqJJu1chB32MX60fgP8GBdVuY7svl7izKBv7Sr8=",
+  "Source": "EventNotifyHub.Main",
+  "BasePath": "_content/EventNotifyHub.Main",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

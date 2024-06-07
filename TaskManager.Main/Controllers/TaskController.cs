@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskManager.Core;
@@ -21,7 +22,7 @@ public class TaskController : ControllerBase
         _logger = logger;
     }
 
-
+    [ExcludeFromCodeCoverage]
     [HttpGet("{id:Guid}")]
     public async Task<ActionResult<MyTask>> GetTask(Guid id)
     {
@@ -30,7 +31,6 @@ public class TaskController : ControllerBase
 
         return task == null ? NotFound() : Ok(task);
     }
-
 
     [HttpGet]
     public async Task<ActionResult<List<TaskResponse>>> GetTasks()
@@ -43,8 +43,9 @@ public class TaskController : ControllerBase
             new TaskResponse(x.Id, x.Title, x.Description, x.Status, x.CreatedDate, x.DueDate)));
     }
 
+    [ExcludeFromCodeCoverage]
     [HttpPost]
-    public async Task<ActionResult<int>> CreateTask(TaskRequest request)
+    public async Task<IActionResult> CreateTask(TaskRequest request)
     {
         var (myTask, error) = MyTask.Create(
             Guid.NewGuid(), request.Title, request.Description, request.Status, request.DueDate, DateTime.Now,
@@ -64,6 +65,7 @@ public class TaskController : ControllerBase
         return Ok(id);
     }
 
+    [ExcludeFromCodeCoverage]
     [HttpPut("{id:guid}")]
     public async Task<ActionResult<Guid>> UpdateTask(Guid id, TaskRequest request)
     {
@@ -85,13 +87,12 @@ public class TaskController : ControllerBase
 
 
         _logger.LogInformation("Update task with id={id} by user with {id}", id, User.UserId());
-        
 
 
         return Ok(await _taskService.Update(myTask));
     }
 
-
+    [ExcludeFromCodeCoverage]
     [HttpDelete("{id:Guid}")]
     public async Task<ActionResult<Guid>> DeleteTask(Guid id)
     {

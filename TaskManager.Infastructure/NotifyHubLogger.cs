@@ -33,7 +33,6 @@ public class NotifyHubLogger : INotifyHubLogger
         }
         catch (ProduceException<Null, string> e)
         {
-            throw e;
             return e.Message;
         }
     }

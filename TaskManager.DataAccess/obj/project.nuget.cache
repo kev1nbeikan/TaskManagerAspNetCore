@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fA121BmgwNOR8gKg53f397CJyEoB3AI/o7J1nWr42RmXpb3biZ3BmpwCUlWe96Q/9r30ZrdorXkLaNQYVrfWqw==",
+  "dgSpecHash": "keNGIZ0iuf8hUenp+TkHa3YADyJ2jHqtVrDTJC2Bu/QFsfh501ZrZAGcvZftZpX6ehZEptVT4yD+WmdIn9V6Bg==",
   "success": true,
   "projectFilePath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager.DataAccess\\TaskManager.DataAccess.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\KevinBacon\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.5\\microsoft.entityframeworkcore.abstractions.8.0.5.nupkg.sha512",
     "C:\\Users\\KevinBacon\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.5\\microsoft.entityframeworkcore.analyzers.8.0.5.nupkg.sha512",
     "C:\\Users\\KevinBacon\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.5\\microsoft.entityframeworkcore.design.8.0.5.nupkg.sha512",
+    "C:\\Users\\KevinBacon\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.5\\microsoft.entityframeworkcore.inmemory.8.0.5.nupkg.sha512",
     "C:\\Users\\KevinBacon\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.5\\microsoft.entityframeworkcore.relational.8.0.5.nupkg.sha512",
     "C:\\Users\\KevinBacon\\.nuget\\packages\\microsoft.entityframeworkcore.relational.design\\1.1.0\\microsoft.entityframeworkcore.relational.design.1.1.0.nupkg.sha512",
     "C:\\Users\\KevinBacon\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
