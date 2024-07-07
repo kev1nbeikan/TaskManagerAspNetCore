@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "1FlTdXV04Wr/G/dQtbyxYkJIj+VAh90K9pUjZWdsWQKU1x6DPMB/wKJLAK0e8m5ozp+1C/xNWvBGdJ0byRvMmw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\TaskManager.Infastructure\\TaskManager.Infastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KevinBacon\\.nuget\\packages\\confluent.kafka\\2.4.0\\confluent.kafka.2.4.0.nupkg.sha512",
+    "C:\\Users\\KevinBacon\\.nuget\\packages\\librdkafka.redist\\2.4.0\\librdkafka.redist.2.4.0.nupkg.sha512",
+    "C:\\Users\\KevinBacon\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

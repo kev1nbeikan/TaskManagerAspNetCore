@@ -1,0 +1,198 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\User.Infastructure\\User.Infastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\TaskManager.Core\\TaskManager.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\TaskManager.Core\\TaskManager.Core.csproj",
+        "projectName": "TaskManager.Core",
+        "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\TaskManager.Core\\TaskManager.Core.csproj",
+        "packagesPath": "C:\\Users\\KevinBacon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\TaskManager.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\KevinBacon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\Users.Core\\Users.Core.csproj": {
+                "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\Users.Core\\Users.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\User.Infastructure\\User.Infastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\User.Infastructure\\User.Infastructure.csproj",
+        "projectName": "User.Infastructure",
+        "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\User.Infastructure\\User.Infastructure.csproj",
+        "packagesPath": "C:\\Users\\KevinBacon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\User.Infastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\KevinBacon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\TaskManager.Core\\TaskManager.Core.csproj": {
+                "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\TaskManager.Core\\TaskManager.Core.csproj"
+              },
+              "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\Users.Core\\Users.Core.csproj": {
+                "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\Users.Core\\Users.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\Users.Core\\Users.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\Users.Core\\Users.Core.csproj",
+        "projectName": "Users.Core",
+        "projectPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\Users.Core\\Users.Core.csproj",
+        "packagesPath": "C:\\Users\\KevinBacon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KevinBacon\\RiderProjects\\WebApplication3\\TaskManager\\Users.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\KevinBacon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
