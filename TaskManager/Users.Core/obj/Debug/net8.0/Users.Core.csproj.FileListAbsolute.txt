@@ -1,0 +1,12 @@
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\bin\Debug\net8.0\Users.Core.deps.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\bin\Debug\net8.0\Users.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\bin\Debug\net8.0\Users.Core.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\Users.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\Users.Core.AssemblyInfoInputs.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\Users.Core.AssemblyInfo.cs
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\Users.Core.csproj.CoreCompileInputs.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\Users.Core.sourcelink.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\Users.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\refint\Users.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\Users.Core.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\Users.Core\obj\Debug\net8.0\ref\Users.Core.dll

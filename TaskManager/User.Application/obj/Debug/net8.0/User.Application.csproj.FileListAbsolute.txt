@@ -1,0 +1,16 @@
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\bin\Debug\net8.0\User.Application.deps.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\bin\Debug\net8.0\User.Application.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\bin\Debug\net8.0\User.Application.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\bin\Debug\net8.0\Users.Core.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\bin\Debug\net8.0\Users.Core.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.Application.csproj.AssemblyReference.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.Application.AssemblyInfoInputs.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.Application.AssemblyInfo.cs
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.Application.csproj.CoreCompileInputs.cache
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.Application.sourcelink.json
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.App.1A218819.Up2Date
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.Application.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\refint\User.Application.dll
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\User.Application.pdb
+C:\Users\KevinBacon\RiderProjects\WebApplication3\User.Application\obj\Debug\net8.0\ref\User.Application.dll
